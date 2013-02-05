@@ -1,12 +1,11 @@
 % LaTeX file for resume 
 % This file uses the resume document class (res.cls)
 \documentclass[margin]{res}
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font  
 \usepackage{xcolor}
 \usepackage{hyperref}
 
-\hypersetup{
+\hypersetup
+{
 	colorlinks=true,
 	linkbordercolor=,
 	linkcolor=blue
@@ -14,11 +13,14 @@
 
 \topmargin=-0.5in  % start text higher on the page
 \setlength{\textheight}{10in} % increase text height to fit resume on 1 page
+
+\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+	\setmainfont{Baskerville}
+
 \begin{document}  
 \name{VASILI SVIRIDOV}
-
 \address{ \#304 - 6742 Station Hill Ct \\ Burnaby, BC, V3N4V2\\Canada }
-                        
 \begin{resume}
 
 \section{CONTACT ME}
@@ -29,7 +31,7 @@
  
 \section{PROJECTS}
 	\section{2011 --- 2012\\\href{http://www.rbcgam.com/gam/}{RBC GAM}}
-	Was engaged in a Senior Web Development role in a small team to design, build, and support a set of frameworks, utilizing ASP.Net MVC and HTML5. Built several products with the frameworks mentioned, including a user management system, a framework for ACL, and several business applications.
+	Was engaged in a Senior Web Developer role in a small team to design, build, and support a set of frameworks, utilizing ASP.Net MVC and HTML5. Built several products with the frameworks mentioned, including a user management system, a framework for ACL, and several business applications.
 	\section{2008 --- 2011\\\href{http://positrace.com}{Global Fleet Management}}
 	 Designed and wrote large portions for a GPS tracking SaaS platform, including, but not limited to, fully dynamic map interface powered by Ajax and Web Sockets to display information about hundreds of vehicles in real time, using JavaScript and Google Maps API. Wrote most of the client facing forms and also a back office application for internal use by sales and support personnel. Developed a custom ORM solution based on MySQL. Wrote Node.JS backend to integrate the web site with our RabbitMQ backend, passing thousands of location and state messages per second. Wrote a mobile web site using ASP.MVC and jQuery mobile.
 	\section{2006 --- 2007\\\href{https://wwwphn.com/}{Phillips,\\Hager \& North}}
@@ -50,20 +52,20 @@
 			\item CSS, LESS
 			\item Bootstrap
 			\item jQuery, jQMobile, MooTools, WebSockets
-			\item WPF/Silverlight
+			\item WPF / Silverlight
 		\end{itemize}
 	\normalsize{\section{Backend}}
 		\begin{itemize}
-			\item IIS/Apache/Nginx
-			\item CouchDB/Riak
+			\item IIS / Apache / Nginx
+			\item CouchDB / Riak
 			\item RabbitMQ
 			\item Node.js
 		\end{itemize}
 	\normalsize{\section{DevOps}}
 		\begin{itemize}
-			\item GIT/SVN
-			\item Trac/Indefero/Bugzilla
-			\item Jenkins, CrusieControl.Net
+			\item GIT / SVN
+			\item Trac / Indefero / Bugzilla
+			\item Jenkins, CruiseControl.Net
 		\end{itemize}
 \newpage
 \section {INTERESTS}
