@@ -1,107 +1,94 @@
-% LaTeX file for resume 
-% This file uses the resume document class (res.cls)
-\documentclass[margin]{res}
-\usepackage{xcolor}
-\usepackage{hyperref}
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
-\hypersetup
-{
-	colorlinks=true,
-	linkbordercolor=,
-	linkcolor=blue
-}
 
-\topmargin=-0.5in  % start text higher on the page
-\setlength{\textheight}{10in} % increase text height to fit resume on 1 page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[11pt, letterpaper]{awesome-cv}
 
-\usepackage{fontspec}
-	\defaultfontfeatures{Ligatures=TeX}
-	\setmainfont{Baskerville}
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
 
-\begin{document}  
-\name{VASILI SVIRIDOV}
-\address{ \#304 - 6742 Station Hill Ct \\ Burnaby, BC, V3N4V2\\Canada }
-\begin{resume}
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
 
-\section{CONTACT ME}
-	\begin{ncolumn}{2}
-		\href{mailto:vasili@sviridov.ca}{vasili@sviridov.ca} & +1 (604) 767 7735 \\
-		\href{http://vasi.li}{http://vasi.li} & \href{http://twitter.com/vsviridov}{@vsviridov}
-	\end{ncolumn}
- 
-\section{PROJECTS}
-	\section{2011 --- 2012\\\href{http://www.rbcgam.com/gam/}{RBC GAM}}
-	Was engaged in a Senior Web Developer role in a small team to design, build, and support a set of frameworks, utilizing ASP.Net MVC and HTML5. Built several products with the frameworks mentioned, including a user management system, a framework for ACL, and several business applications. Heavily utilized Twitter Bootstrap, jQuery, jQueryUI frameworks along with custom javascript code to handle complex data entry scenarios, including ajax validation and processing. Built a scheduler application with web interface, that allowed users to set up various data downloads from external vendors. It featured a simple to use UI and a system of notifications via email. Another application was a fund performance simulator, for which I have developed a UI, that allowed people to set up various parameters of the simulation. It featured a complex matrix of interdependent controls where changing a parameter would affect options for other controls.
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-red}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
 
-	\section{2008 --- 2011\\\href{http://positrace.com}{Global Fleet Management}}
-	 Designed and wrote large portions for a GPS tracking SaaS platform, including, but not limited to, fully dynamic map interface powered by Ajax and Web Sockets to display information about hundreds of vehicles in real time, using JavaScript, MooTools framework and Google Maps API. Wrote most of the client facing forms and also a back office application for internal use by sales and support personnel. Developed a custom ORM solution based on MySQL. Wrote Node.JS backend to integrate the web site with our RabbitMQ backend, passing thousands of location and state messages per second. Wrote a mobile web site using ASP.MVC and jQuery mobile.
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
 
-	\section{2006 --- 2007\\\href{https://wwwphn.com/}{Phillips,\\Hager \& North}}
-	Worked as a consultant for an investment management firm, helping them to build a custom solution to provide clients with pricing and trading controls utilizing the DotNetNuke CMS.\\
 
-	\section{2005 --- 2006\\\href{http://cougartg.com}{Cougar TG}}
-	Worked on an e-commerce system for a Vancouver software manufacturer company. Developed visuals and business logic to perform various up-sells, cross-sells and promotions, using vanilla ASP.Net Web Forms and MS SQL Server.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
 
-\section{STACK} 
-	\normalsize{\section{Languages}}
-		\itemsep -2pt
- 		\begin{itemize}
- 			\item C\#, JavaScript, Scala, PHP
-		\end{itemize}
-	\normalsize{\section{Markup \& FrontEnd}}
-		\itemsep -2pt
-		\begin{itemize}
-			\item HTML5
-			\item CSS, LESS
-			\item Bootstrap
-			\item jQuery, jQMobile, MooTools, WebSockets
-			\item WPF / Silverlight
-			\item \LaTeX
-		\end{itemize}
-	\normalsize{\section{Backend}}
-		\begin{itemize}
-			\item IIS / Apache / Nginx
-			\item CouchDB / Riak
-			\item RabbitMQ
-			\item Node.js
-		\end{itemize}
-	\normalsize{\section{DevOps}}
-		\begin{itemize}
-			\item GIT / SVN
-			\item Trac / Indefero / Bugzilla
-			\item Jenkins, CruiseControl.Net
-		\end{itemize}
-\newpage
-\section {INTERESTS}
-	\normalsize{\section{Natural Languages}}
-		\begin{itemize}
-			\item Japanese
-			\item Esperanto
-		\end{itemize}
-	\normalsize{\section{Computer Languages}}
-		\begin{itemize}
-			\item Haskell
-			\item F\#
-			\item Erlang
-		\end{itemize}
-	\normalsize{\section{Frameworks \& Technologies}}
-		\begin{itemize}
-			\item FubuMVC
-			\item Play Framework
-		\end{itemize}
-	\section{Misc}
-		\begin{itemize}
-			\item Fork this resume on \href{https://github.com/vsviridov/resume}{GitHub} :)
-			\item \href{http://ca.linkedin.com/in/vasilisviridov/}{My LinkedIn Profile}
-		\end{itemize}
-\end{resume}
+
+\setbool{acvSectionColorHighlight}{false}
+\photo[circle,noedge,left]{mug.png}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
+\name{Vasili}{Sviridov}
+\address{1904 - 5885 Olive Ave., Burnaby, BC, Canada, V5H 4N8}
+\mobile{+1 (604) 767 7735} 
+%%% Social
+\email{vasili@sviridov.ca}
+\homepage{vasi.li}
+\github{vsviridov}
+\gitlab{vsviridov}
+\linkedin{vasilisviridov}
+%%% Optionals
+\position{Software Engineer}%%%{\enskip\cdotp\enskip}
+\quote{"I don't always accidentally, but when I do -- I accidentally the whole thing."}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {\href{http://vasi.li/}{Vasili Sviridov}}
+  {\thepage}
+
+\begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
+
+%%% Import contents
+\import{\sectiondir}{01-summary.tex}
+\import{\sectiondir}{02-education.tex}
+\import{\sectiondir}{03-experience.tex}
+\import{\sectiondir}{04-mentoring.tex}
+\import{\sectiondir}{05-misc.tex}
+
 \end{document}
-
-
-
-
-
-
-
-
-
